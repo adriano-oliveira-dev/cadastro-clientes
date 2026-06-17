@@ -75,7 +75,24 @@ cadastro-clientes/
 
 ## 6. 🔗 Endpoints
 
-Em breve.
+### Clientes
+
+| Método | URL | Descrição |
+|--------|-----|-----------|
+| GET | /clientes | Lista todos os clientes |
+| GET | /clientes/{id} | Busca cliente por ID |
+| POST | /clientes | Cadastra novo cliente |
+| PUT | /clientes/{id} | Atualiza cliente |
+| DELETE | /clientes/{id} | Remove cliente |
+
+### Exemplo de corpo da requisição (POST/PUT)
+
+    {
+        "nome": "João Silva",
+        "email": "joao@email.com",
+        "telefone": "47999999999",
+        "cpf": "123.456.789-00"
+    }
 
 ## Autor
 
