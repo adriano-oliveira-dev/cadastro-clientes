@@ -85,14 +85,44 @@ cadastro-clientes/
 | PUT | /clientes/{id} | Atualiza cliente |
 | DELETE | /clientes/{id} | Remove cliente |
 
-### Exemplo de corpo da requisição (POST/PUT)
+### Exemplos de requisição
 
+#### POST /clientes
     {
         "nome": "João Silva",
         "email": "joao@email.com",
         "telefone": "47999999999",
         "cpf": "123.456.789-00"
     }
+
+#### Resposta POST (201 Created)
+    {
+        "id": 1,
+        "nome": "João Silva",
+        "email": "joao@email.com",
+        "telefone": "47999999999",
+        "cpf": "123.456.789-00"
+    }
+
+#### PUT /clientes/{id}
+    {
+        "nome": "João Silva Atualizado",
+        "email": "joao@email.com",
+        "telefone": "47988888888",
+        "cpf": "123.456.789-00"
+    }
+
+#### Resposta PUT (200 OK)
+    {
+        "id": 1,
+        "nome": "João Silva Atualizado",
+        "email": "joao@email.com",
+        "telefone": "47988888888",
+        "cpf": "123.456.789-00"
+    }
+
+#### DELETE /clientes/{id}
+    Resposta: 204 No Content
 
 ## Autor
 
