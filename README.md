@@ -57,14 +57,21 @@ A API estará disponível em http://localhost:8080
 A API estará disponível em `http://localhost:8080`
 
 ## 5. 📁 Estrutura do projeto
-src/
-└── main/
-    └── java/
-        └── com/adriano/cadastro_cliente_api/
-            ├── model/
-            ├── repository/
-            ├── service/
-            └── controller/
+cadastro-clientes/
+├── backend/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/
+│   │       │   └── com/adriano/cadastro_cliente_api/
+│   │       │       ├── model/
+│   │       │       ├── repository/
+│   │       │       ├── service/
+│   │       │       └── controller/
+│   │       └── resources/
+│   │           └── application.properties
+│   └── pom.xml
+├── frontend/
+└── README.md
 
 ## 6. 🔗 Endpoints
 
