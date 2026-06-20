@@ -124,6 +124,56 @@ cadastro-clientes/
 #### DELETE /clientes/{id}
     Resposta: 204 No Content
 
+##==========================&&=============================##
+
+
+## 💻 Frontend
+
+- React 19
+- Vite
+- Axios
+- React Router DOM
+
+## 🖥️ Como executar o frontend
+
+### Pré-requisitos
+- Node.js
+- npm
+
+### 1. Entrar na pasta do frontend
+    cd frontend
+
+### 2. Instalar dependências
+    npm install
+
+### 3. Rodar o projeto
+    npm run dev
+
+O frontend estará disponível em http://localhost:5173
+
+## 📁 Estrutura do projeto
+
+    cadastro-clientes/
+    ├── backend/
+    │   ├── src/
+    │   │   └── main/
+    │   │       ├── java/
+    │   │       │   └── com/adriano/cadastro_cliente_api/
+    │   │       │       ├── controller/
+    │   │       │       ├── exception/
+    │   │       │       ├── model/
+    │   │       │       ├── repository/
+    │   │       │       └── service/
+    │   │       └── resources/
+    │   │           └── application.properties
+    │   └── pom.xml
+    └── frontend/
+        ├── src/
+        │   ├── components/
+        │   ├── pages/
+        │   └── services/
+        └── package.json
+
 ## Autor
 
 Adriano Oliveira — [LinkedIn](www.linkedin.com/in/adriano-oliveira-a8336b387)
