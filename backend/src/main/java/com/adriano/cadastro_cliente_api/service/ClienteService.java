@@ -1,5 +1,6 @@
 package com.adriano.cadastro_cliente_api.service;
 
+import com.adriano.cadastro_cliente_api.exception.ResourceNotFoundException;
 import com.adriano.cadastro_cliente_api.model.Cliente;
 import com.adriano.cadastro_cliente_api.repository.ClienteRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,9 +20,8 @@ public class ClienteService {
 
     public Cliente buscarPorId(Long id) {
         return clienteRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Cliente não encontrado com id: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Cliente não encontrado com id: " + id));
     }
-
     public Cliente salvar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
