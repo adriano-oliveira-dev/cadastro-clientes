@@ -122,7 +122,7 @@ cadastro-clientes/
     }
 
 #### DELETE /clientes/{id}
-    Resposta: 204 No Content
+    Resposta: 204 No Contentgit
 
 ##==========================&&=============================##
 

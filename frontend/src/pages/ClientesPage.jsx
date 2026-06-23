@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { listarClientes, deletarCliente } from '../services/clienteService'
 
 function ClientesPage() {
   const [clientes, setClientes] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     carregarClientes()
@@ -21,6 +23,7 @@ function ClientesPage() {
   return (
     <div>
       <h1>Clientes</h1>
+      <button onClick={() => navigate('/novo')}>Novo Cliente</button>
       <table>
         <thead>
           <tr>
@@ -41,6 +44,9 @@ function ClientesPage() {
               <td>{cliente.telefone}</td>
               <td>{cliente.cpf}</td>
               <td>
+                <button onClick={() => navigate(`/editar/${cliente.id}`)}>
+                  Editar
+                </button>
                 <button onClick={() => handleDeletar(cliente.id)}>
                   Deletar
                 </button>
