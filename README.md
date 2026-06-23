@@ -149,4 +149,4 @@ O frontend estará disponível em http://localhost:5173
 
 ## Autor
 
-Adriano Oliveira — [LinkedIn](www.linkedin.com/in/adriano-oliveira-a8336b387) | [GitHub](https://github.com/adriano-oliveira-dev)
+Adriano Oliveira — LinkedIn: (www.linkedin.com/in/adriano-oliveira-a8336b387) | GitHub: (https://github.com/adriano-oliveira-dev)
