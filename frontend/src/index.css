@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #1a1a2e;
+}
+
+/* Botões */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background-color: #4361ee;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #3a56d4;
+}
+
+.btn-edit {
+  background-color: #f8961e;
+  color: white;
+  margin-right: 8px;
+}
+
+.btn-edit:hover {
+  background-color: #e07b0a;
+}
+
+.btn-delete {
+  background-color: #ef233c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c1121f;
+}
+
+.btn-cancel {
+  background-color: #adb5bd;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn-cancel:hover {
+  background-color: #868e96;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+th {
+  background-color: #4361ee;
+  color: white;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: #f8f9ff;
+}
+
+/* Formulário */
+.form-card {
+  background: white;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #4361ee;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-save {
+  background-color: #4361ee;
+  color: white;
+  padding: 10px 24px;
+}
+
+.btn-save:hover {
+  background-color: #3a56d4;
+}

@@ -21,9 +21,11 @@ function ClientesPage() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Clientes</h1>
-      <button onClick={() => navigate('/novo')}>Novo Cliente</button>
+      <button className="btn-primary" onClick={() => navigate('/novo')}>
+        + Novo Cliente
+      </button>
       <table>
         <thead>
           <tr>
@@ -44,10 +46,10 @@ function ClientesPage() {
               <td>{cliente.telefone}</td>
               <td>{cliente.cpf}</td>
               <td>
-                <button onClick={() => navigate(`/editar/${cliente.id}`)}>
+                <button className="btn-edit" onClick={() => navigate(`/editar/${cliente.id}`)}>
                   Editar
                 </button>
-                <button onClick={() => handleDeletar(cliente.id)}>
+                <button className="btn-delete" onClick={() => handleDeletar(cliente.id)}>
                   Deletar
                 </button>
               </td>

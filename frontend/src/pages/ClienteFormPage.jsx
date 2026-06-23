@@ -36,28 +36,32 @@ function ClienteFormPage() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>{id ? 'Editar Cliente' : 'Novo Cliente'}</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nome</label>
-          <input name="nome" value={form.nome} onChange={handleChange} />
-        </div>
-        <div>
-          <label>Email</label>
-          <input name="email" value={form.email} onChange={handleChange} />
-        </div>
-        <div>
-          <label>Telefone</label>
-          <input name="telefone" value={form.telefone} onChange={handleChange} />
-        </div>
-        <div>
-          <label>CPF</label>
-          <input name="cpf" value={form.cpf} onChange={handleChange} />
-        </div>
-        <button type="submit">Salvar</button>
-        <button type="button" onClick={() => navigate('/')}>Cancelar</button>
-      </form>
+      <div className="form-card">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Nome</label>
+            <input name="nome" value={form.nome} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input name="email" value={form.email} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>Telefone</label>
+            <input name="telefone" value={form.telefone} onChange={handleChange} />
+          </div>
+          <div className="form-group">
+            <label>CPF</label>
+            <input name="cpf" value={form.cpf} onChange={handleChange} />
+          </div>
+          <div className="form-actions">
+            <button type="submit" className="btn-save">Salvar</button>
+            <button type="button" className="btn-cancel" onClick={() => navigate('/')}>Cancelar</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
