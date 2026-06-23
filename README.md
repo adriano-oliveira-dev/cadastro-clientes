@@ -1,79 +1,86 @@
-# Cadastro de Clientes API
+# Cadastro de Clientes
 
-API REST para gerenciamento de cadastro de clientes, desenvolvida com Java e Spring Boot.
+Sistema fullstack de cadastro de clientes desenvolvido com Java, Spring Boot e React.
 
 ## 🚀 Tecnologias
 
+### Backend
 - Java 21
 - Spring Boot 4.1.0
 - Spring Data JPA
+- Spring Validation
 - PostgreSQL
 - Lombok
 - Maven
 
+### Frontend
+- React 19
+- Vite
+- Axios
+- React Router DOM
+- CSS puro
+
+### Ferramentas
+- Postman (testes de API)
+- IntelliJ IDEA (backend)
+- VS Code (frontend)
+- Git e GitHub
+
 ## 📋 Funcionalidades
 
-- Cadastrar cliente
 - Listar clientes
-- Buscar cliente por ID
-- Atualizar cliente
+- Cadastrar cliente
+- Editar cliente
 - Deletar cliente
+- Validação de dados
+- Tratamento de erros
 
 ## ⚙️ Como executar
 
 ### Pré-requisitos
 - Java 21
 - PostgreSQL
-- Maven
+- Node.js
+- npm
 
-### 2. Criar o banco de dados
+### Backend
 
-Acesse o psql e execute:
+#### 1. Clonar o repositório
+    git clone https://github.com/adriano-oliveira-dev/cadastro-clientes.git
 
+#### 2. Criar o banco de dados
     psql -U postgres
     CREATE DATABASE cadastro_clientes;
 
-Confirme se o banco foi criado:
+#### 3. Configurar o backend/src/main/resources/application.properties
+    spring.datasource.url=jdbc:postgresql://localhost:5432/cadastro_clientes
+    spring.datasource.username=postgres
+    spring.datasource.password=SUA_SENHA
 
-    \l
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
-### 3. Configurar application.properties
-```properties
-spring.application.name=cadastro-cliente-api
-spring.datasource.url=jdbc:postgresql://localhost:5432/cadastro_clientes
-spring.datasource.username=postgres
-spring.datasource.password=SUA_SENHA
+    server.error.include-stacktrace=never
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-
-### 4. Rodar o projeto
-
+#### 4. Rodar o backend
+    cd backend
     mvn spring-boot:run
 
 A API estará disponível em http://localhost:8080
 
-A API estará disponível em `http://localhost:8080`
+### Frontend
 
-## 5. 📁 Estrutura do projeto
-cadastro-clientes/
-├── backend/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/adriano/cadastro_cliente_api/
-│   │       │       ├── model/
-│   │       │       ├── repository/
-│   │       │       ├── service/
-│   │       │       └── controller/
-│   │       └── resources/
-│   │           └── application.properties
-│   └── pom.xml
-├── frontend/
-└── README.md
+#### 1. Instalar dependências
+    cd frontend
+    npm install
 
-## 6. 🔗 Endpoints
+#### 2. Rodar o frontend
+    npm run dev
+
+O frontend estará disponível em http://localhost:5173
+
+## 🔗 Endpoints
 
 ### Clientes
 
@@ -85,9 +92,8 @@ cadastro-clientes/
 | PUT | /clientes/{id} | Atualiza cliente |
 | DELETE | /clientes/{id} | Remove cliente |
 
-### Exemplos de requisição
+### Exemplo de corpo da requisição (POST/PUT)
 
-#### POST /clientes
     {
         "nome": "João Silva",
         "email": "joao@email.com",
@@ -95,7 +101,8 @@ cadastro-clientes/
         "cpf": "123.456.789-00"
     }
 
-#### Resposta POST (201 Created)
+### Resposta POST (201 Created)
+
     {
         "id": 1,
         "nome": "João Silva",
@@ -104,15 +111,8 @@ cadastro-clientes/
         "cpf": "123.456.789-00"
     }
 
-#### PUT /clientes/{id}
-    {
-        "nome": "João Silva Atualizado",
-        "email": "joao@email.com",
-        "telefone": "47988888888",
-        "cpf": "123.456.789-00"
-    }
+### Resposta PUT (200 OK)
 
-#### Resposta PUT (200 OK)
     {
         "id": 1,
         "nome": "João Silva Atualizado",
@@ -121,35 +121,8 @@ cadastro-clientes/
         "cpf": "123.456.789-00"
     }
 
-#### DELETE /clientes/{id}
-    Resposta: 204 No Contentgit
-
-##==========================&&=============================##
-
-
-## 💻 Frontend
-
-- React 19
-- Vite
-- Axios
-- React Router DOM
-
-## 🖥️ Como executar o frontend
-
-### Pré-requisitos
-- Node.js
-- npm
-
-### 1. Entrar na pasta do frontend
-    cd frontend
-
-### 2. Instalar dependências
-    npm install
-
-### 3. Rodar o projeto
-    npm run dev
-
-O frontend estará disponível em http://localhost:5173
+### DELETE /clientes/{id}
+    Resposta: 204 No Content
 
 ## 📁 Estrutura do projeto
 
@@ -176,5 +149,4 @@ O frontend estará disponível em http://localhost:5173
 
 ## Autor
 
-Adriano Oliveira — [LinkedIn](www.linkedin.com/in/adriano-oliveira-a8336b387)
-| [GitHub](https://github.com/adriano-oliveira-dev)
+Adriano Oliveira — [LinkedIn](www.linkedin.com/in/adriano-oliveira-a8336b387) | [GitHub](https://github.com/adriano-oliveira-dev)
